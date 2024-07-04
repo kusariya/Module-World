@@ -4,7 +4,7 @@ modified from chengengyue
 */
 
 
-//% color="#228B22" weight=25 icon="\uf0b2"
+//% color="#228B22" weight=25 icon="\uf080"
 namespace ModuleWorld_Digital {
 	
     export enum mwDigitalNum {
@@ -318,7 +318,7 @@ namespace ModuleWorld_Digital {
 
 }
 
-//% color="#C814B8" weight=24 icon="\uf1d4"
+//% color="#C814B8" weight=24 icon="\uf012"
 namespace ModuleWorld_Analog {
 
     export enum enRocker {
