@@ -2,7 +2,7 @@
 
 	"ModuleWorld_Digital|block": "ModuleWorld_Digital",
 	"{id:category}ModuleWorld_Digital": "ModuleWorld_Digital",
-    "ModuleWorld_Digital.dht11value|block": "温度湿度センサー(%value_DNum|)から%dht11type|を取得する",
+    "ModuleWorld_Digital.dht11value|block": "温度湿度センサーから(%dht11type|)を取得し、%value_DNum|へ接続する",
     "ModuleWorld_Digital.Ultrasonic|block": "超音波センサー(%value_DNum|)から距離を取得する",
     "ModuleWorld_Digital.IR|block": "赤外線センサー(%value_DNum|)が %value|なら真",
     "ModuleWorld_Digital.PIR|block": "赤外線人感センサー(%value_DNum|)が%value|なら真",
