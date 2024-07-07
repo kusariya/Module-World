@@ -27,7 +27,21 @@ namespace ModuleWorld_Digital {
         //% blockId="P14P15" block="P14P15"
         P14P15 = 9,
         //% blockId="P1P10" block="P1P10"
-        P1P10 = 10
+        P1P10 = 10,
+
+        // params for SuperBit
+        //% blockId="P4P6" block="P4P6"
+        P4P6 = 11,
+        //% blockId="P1P2" block="P1P2"
+        P1P2 = 12,
+        //% blockId="P0P3" block="P0P3"
+        P0P3 = 13,
+        //% blockId="P9P10" block="P9P10"
+        P9P10 = 14,
+        //% blockId="P7P8" block="P7P8"
+        P7P8 = 15,
+        //% blockId="P5P11" block="P5P11"
+        P5P11 = 16
     }	
 	
 
@@ -92,6 +106,12 @@ namespace ModuleWorld_Digital {
 		else if(value_DNum == 8)	{ dht11pin = DigitalPin.P12; }
 		else if(value_DNum == 9)	{ dht11pin = DigitalPin.P14; }
 		else if(value_DNum == 10)	{ dht11pin = DigitalPin.P1; }
+		else if(value_DNum == 11)	{ dht11pin = DigitalPin.P4; }
+		else if(value_DNum == 12)	{ dht11pin = DigitalPin.P1; }
+		else if(value_DNum == 13)	{ dht11pin = DigitalPin.P0; }
+		else if(value_DNum == 14)	{ dht11pin = DigitalPin.P10; }
+		else if(value_DNum == 15)	{ dht11pin = DigitalPin.P7; }
+		else if(value_DNum == 16)	{ dht11pin = DigitalPin.P5; }
 			
 		pins.digitalWritePin(dht11pin, 0)
 		basic.pause(18)
@@ -192,6 +212,12 @@ namespace ModuleWorld_Digital {
 		else if(value_DNum == 8)	{ Trig = DigitalPin.P12; Echo = DigitalPin.P13; }
 		else if(value_DNum == 9)	{ Trig = DigitalPin.P14; Echo = DigitalPin.P15; }
 		else if(value_DNum == 10)	{ Trig = DigitalPin.P1; Echo = DigitalPin.P10; }
+		else if(value_DNum == 11)	{ Trig = DigitalPin.P4; Echo = DigitalPin.P6; } // for SuperBit
+		else if(value_DNum == 12)	{ Trig = DigitalPin.P1; Echo = DigitalPin.P2; } // for SuperBit
+		else if(value_DNum == 13)	{ Trig = DigitalPin.P0; Echo = DigitalPin.P3; } // for SuperBit
+		else if(value_DNum == 14)	{ Trig = DigitalPin.P10; Echo = DigitalPin.P9; } // for SuperBit
+		else if(value_DNum == 15)	{ Trig = DigitalPin.P7; Echo = DigitalPin.P8; } // for SuperBit
+		else if(value_DNum == 16)	{ Trig = DigitalPin.P5; Echo = DigitalPin.P11; } // for SuperBit
 		
 		
         pins.setPull(Trig, PinPullMode.PullNone);
@@ -223,6 +249,12 @@ namespace ModuleWorld_Digital {
 		else if(value_DNum == 8)	{ pin = DigitalPin.P12; }
 		else if(value_DNum == 9)	{ pin = DigitalPin.P14; }
 		else if(value_DNum == 10)	{ pin = DigitalPin.P1; }
+		else if(value_DNum == 11)	{ pin = DigitalPin.P4; }
+		else if(value_DNum == 12)	{ pin = DigitalPin.P1; }
+		else if(value_DNum == 13)	{ pin = DigitalPin.P0; }
+		else if(value_DNum == 14)	{ pin = DigitalPin.P10; }
+		else if(value_DNum == 15)	{ pin = DigitalPin.P7; }
+		else if(value_DNum == 16)	{ pin = DigitalPin.P5; }
 
         pins.setPull(pin, PinPullMode.PullUp);
         return pins.digitalReadPin(pin) == value;
@@ -244,9 +276,16 @@ namespace ModuleWorld_Digital {
 		else if(value_DNum == 8)	{ pin = DigitalPin.P12; }
 		else if(value_DNum == 9)	{ pin = DigitalPin.P14; }
 		else if(value_DNum == 10)	{ pin = DigitalPin.P1; }
+		else if(value_DNum == 11)	{ pin = DigitalPin.P4; } // for SuperBit
+		else if(value_DNum == 12)	{ pin = DigitalPin.P1; } // for SuperBit
+		else if(value_DNum == 13)	{ pin = DigitalPin.P0; } // for SuperBit
+		else if(value_DNum == 14)	{ pin = DigitalPin.P10; } // for SuperBit
+		else if(value_DNum == 15)	{ pin = DigitalPin.P7; } // for SuperBit
+		else if(value_DNum == 16)	{ pin = DigitalPin.P5; } // for SuperBit
+
 
         pins.setPull(pin, PinPullMode.PullDown);
-	pins.digitalWritePin(pin, 1);
+	    pins.digitalWritePin(pin, 1);
         return pins.digitalReadPin(pin) == value;
     }
 	
@@ -267,6 +306,12 @@ namespace ModuleWorld_Digital {
 		else if(value_DNum == 8)	{ pin = DigitalPin.P12; }
 		else if(value_DNum == 9)	{ pin = DigitalPin.P14; }
 		else if(value_DNum == 10)	{ pin = DigitalPin.P1; }
+		else if(value_DNum == 11)	{ pin = DigitalPin.P4; } // for SuperBit
+		else if(value_DNum == 12)	{ pin = DigitalPin.P1; } // for SuperBit
+		else if(value_DNum == 13)	{ pin = DigitalPin.P0; } // for SuperBit
+		else if(value_DNum == 14)	{ pin = DigitalPin.P10; } // for SuperBit
+		else if(value_DNum == 15)	{ pin = DigitalPin.P7; } // for SuperBit
+		else if(value_DNum == 16)	{ pin = DigitalPin.P5; } // for SuperBit
 		
         pins.setPull(pin, PinPullMode.PullUp);
         return pins.digitalReadPin(pin) == value;
@@ -289,6 +334,12 @@ namespace ModuleWorld_Digital {
 		else if(value_DNum == 8)	{ pin = DigitalPin.P12; }
 		else if(value_DNum == 9)	{ pin = DigitalPin.P14; }
 		else if(value_DNum == 10)	{ pin = DigitalPin.P1; }
+		else if(value_DNum == 11)	{ pin = DigitalPin.P4; } // for SuperBit
+		else if(value_DNum == 12)	{ pin = DigitalPin.P1; } // for SuperBit
+		else if(value_DNum == 13)	{ pin = DigitalPin.P0; } // for SuperBit
+		else if(value_DNum == 14)	{ pin = DigitalPin.P10; } // for SuperBit
+		else if(value_DNum == 15)	{ pin = DigitalPin.P7; } // for SuperBit
+		else if(value_DNum == 16)	{ pin = DigitalPin.P5; } // for SuperBit
 		
         pins.setPull(pin, PinPullMode.PullUp);
         return pins.digitalReadPin(pin) == value;
@@ -309,6 +360,12 @@ namespace ModuleWorld_Digital {
 		else if(value_DNum == 8)	{ pin = DigitalPin.P12; }
 		else if(value_DNum == 9)	{ pin = DigitalPin.P14; }
 		else if(value_DNum == 10)	{ pin = DigitalPin.P1; }
+		else if(value_DNum == 11)	{ pin = DigitalPin.P4; } // for SuperBit
+		else if(value_DNum == 12)	{ pin = DigitalPin.P1; } // for SuperBit
+		else if(value_DNum == 13)	{ pin = DigitalPin.P0; } // for SuperBit
+		else if(value_DNum == 14)	{ pin = DigitalPin.P10; } // for SuperBit
+		else if(value_DNum == 15)	{ pin = DigitalPin.P7; } // for SuperBit
+		else if(value_DNum == 16)	{ pin = DigitalPin.P5; } // for SuperBit
 		
         pins.setPull(pin, PinPullMode.PullUp);
 		pins.setEvents(pin, PinEventType.Edge);
@@ -340,7 +397,12 @@ namespace ModuleWorld_Analog {
         //% blockId="P2P3" block="P2P3"
         AP2P3 = 2,
         //% blockId="P3P4" block="P3P4"
-        AP3P4 = 3
+        AP3P4 = 3,
+        // For SuperBit
+        //% blockId="P1P2" block="P1P2"
+        AP1P2 = 4,
+        //% blockId="P0P3" block="P0P3"
+        AP0P3 = 5
     }	
 
     //% blockId=ModuleWorld_Anaglog_Light block="Light|pin %value_ANum"
@@ -353,6 +415,8 @@ namespace ModuleWorld_Analog {
 		if(value_ANum == 1)	{ lightpin = AnalogPin.P0; }
 		else if(value_ANum == 2)	{ lightpin = AnalogPin.P2; }
 		else if(value_ANum == 3)	{ lightpin = AnalogPin.P3; }
+		else if(value_ANum == 4)	{ lightpin = AnalogPin.P1; } // For SuperBit
+		else if(value_ANum == 5)	{ lightpin = AnalogPin.P0; } // For SuperBit
 		
         value = 1024-pins.analogReadPin(lightpin);
         return value;
@@ -369,6 +433,8 @@ namespace ModuleWorld_Analog {
 		if(value_ANum == 1)	{ soundpin = AnalogPin.P0; }
 		else if(value_ANum == 2)	{ soundpin = AnalogPin.P2; }
 		else if(value_ANum == 3)	{ soundpin = AnalogPin.P3; }
+		else if(value_ANum == 4)	{ soundpin = AnalogPin.P1; } // For SuperBit
+		else if(value_ANum == 5)	{ soundpin = AnalogPin.P0; } // For SuperBit
 		
         value = pins.analogReadPin(soundpin);
         return value;
@@ -384,6 +450,8 @@ namespace ModuleWorld_Analog {
 		if(value_ANum == 1)	{ pin = AnalogPin.P0; }
 		else if(value_ANum == 2)	{ pin = AnalogPin.P2; }
 		else if(value_ANum == 3)	{ pin = AnalogPin.P3; }
+		else if(value_ANum == 4)	{ pin = AnalogPin.P1; } // For SuperBit
+		else if(value_ANum == 5)	{ pin = AnalogPin.P0; } // For SuperBit
 		
         value = pins.analogReadPin(pin);
         return value;
@@ -400,6 +468,8 @@ namespace ModuleWorld_Analog {
 		if(value_ANum == 1)	{ pin1 = AnalogPin.P0; pin2 = AnalogPin.P1; }
 		else if(value_ANum == 2)	{ pin1 = AnalogPin.P2; pin2 = AnalogPin.P3; }
 		else if(value_ANum == 3)	{ pin1 = AnalogPin.P3; pin2 = AnalogPin.P4; }
+		else if(value_ANum == 4)	{ pin1 = AnalogPin.P1; pin2 = AnalogPin.P2; } // For SuperBit
+		else if(value_ANum == 5)	{ pin1 = AnalogPin.P0; pin2 = AnalogPin.P3; } // For SuperBit
 		
         let x = pins.analogReadPin(pin1);
         let y = pins.analogReadPin(pin2);
